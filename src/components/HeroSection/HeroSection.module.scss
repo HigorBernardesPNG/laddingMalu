@@ -1,0 +1,27 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.hero {
+  @include grid-desktop;
+  background-color: $background-one;
+  text-align: center;
+}
+
+.container {
+  @include container-base;
+  margin: 0 auto;
+}
+
+.title {
+  @include paragraph-base;
+  font-size: $size-titule-heroSection;
+}
+
+.subtitle {
+  @include paragraph-base;
+  font-size: $size-subtitule-heroSection;
+}
+
+.ctaButton {
+  @include button-base;
+}
