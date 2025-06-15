@@ -3,7 +3,6 @@
 // _mixins.scss
 
 @mixin container-base {
-  width: 100lvw;
   height: 100lvh;
 }
 
@@ -24,11 +23,12 @@
 }
 
 @mixin button-base {
-  // display: flex;
-  // align-items: center;
-  padding: 12px 12px;
-  width: 204;
-  height: 56;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 8px;
+  width: 180;
+  height: 48;
   border-radius: $border-radius;
   border: 1px solid $border-color;
   background-color: $dark-color;
@@ -45,7 +45,7 @@
 
 @mixin grid-desktop {
 
-  padding: 127px 88px;
+  padding: 88px 88px;
 
 }
 
@@ -54,3 +54,13 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin flex-direction {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+

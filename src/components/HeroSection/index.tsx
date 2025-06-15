@@ -9,7 +9,7 @@ const HeroSection = () => {
         <Image
           src="/images/logoHeroSection.svg"
           alt="Logo da advogada Maria Luiza Munhoz"
-          width={248}
+          width={288}
           height={200}
           priority
         />

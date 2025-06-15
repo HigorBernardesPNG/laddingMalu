@@ -1,0 +1,59 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.hero {
+  @include grid-desktop;
+  background-color: $dark-color;
+  height: auto;
+  width: 100lvw;
+  text-align: center;
+}
+
+.container {
+  @include container-base;
+  @include flex-direction;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.containerAreasGlobal {
+
+    display: flex;
+    gap: 8px;
+
+}
+
+.containerAreas {
+
+    @include flex-center;
+    flex-direction: column;
+    background-color: $light-color;
+    padding: 20px 20px;
+    border-radius: 2px;
+    gap: 8px
+
+}
+
+.titleSection {
+
+  @include paragraph-base;
+  font-size: $size-titule-areasSection;
+  border-bottom: 2px solid $light-color; 
+  display: inline-block; 
+  margin-bottom: 4px;
+
+}
+
+.title {
+  @include paragraph-base;
+  font-size: $size-titule-areasSection;
+}
+
+.paragraph {
+  @include paragraph-base;
+  font-size: $size-text-block;
+}
+
+.ctaButton {
+  @include button-base;
+}
