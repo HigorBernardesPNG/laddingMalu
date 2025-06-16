@@ -43,8 +43,8 @@ const AreasSection = () => {
                 <p className={styles.title}>Direito do Consumidor</p>
                 <p className={styles.paragraph}>Defesa em compras com defeito, cobranças indevidas e serviços mal prestados.</p>
             </div>
-            </section>
-            <section className={styles.containerAreasGlobal}>
+        </section>
+        <section className={styles.containerAreasGlobal}>
             <div className={styles.containerAreas}>
                 <Image
                     src="/images/direitoTrabalhista.svg"

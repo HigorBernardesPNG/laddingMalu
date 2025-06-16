@@ -18,12 +18,12 @@
 }
 
 .title {
-  @include paragraph-base;
+  color: $paragraph-color;
   font-size: $size-titule-heroSection;
 }
 
 .subtitle {
-  @include paragraph-base;
+  color: $paragraph-color;
   font-size: $size-subtitule-heroSection;
 }
 

@@ -8,7 +8,15 @@
 
 @mixin paragraph-base {
 
-  color: $paragraph-color;
+  font-family: $font-base;
+  font-size: $size-subtitule-heroSection;
+
+}
+
+@mixin titule-base {
+
+  font-weight: bold;
+  font-size: $size-subtitule-heroSection;
   font-family: $font-base;
 
 }
@@ -45,7 +53,7 @@
 
 @mixin grid-desktop {
 
-  padding: 88px 88px;
+  padding: 56px 88px;
 
 }
 
