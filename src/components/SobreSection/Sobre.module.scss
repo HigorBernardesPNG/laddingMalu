@@ -1,0 +1,64 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.hero {
+  @include grid-desktop;
+  background-color: $dark-color;
+  height: 100lvh;
+  width: 100lvw;
+  text-align: center;
+}
+
+.container {
+  @include flex-direction;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.containerAreasGlobal {
+
+    display: flex;
+    gap: 16px;
+
+}
+
+.containerAreas {
+
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.514);
+    background-color: $light-color;
+    padding: 32px 32px;
+    border-radius: 2px;
+    gap: 16px;
+
+  p {
+    font-size: $size-subtitule-heroSection;
+  }
+
+}
+
+.titleSection {
+
+  color: $light-color;
+  font-size: $size-titule-areasSection;
+  border-bottom: 2px solid $light-color; 
+  display: inline-block; 
+  margin-bottom: 4px;
+
+}
+
+.title {
+  @include titule-base;
+}
+
+.paragraph {
+  color: $background-one;
+  font-size: $size-text-block;
+  font-weight: 400;
+}
+
+.ctaButton {
+  @include button-base;
+}
