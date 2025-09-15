@@ -37,18 +37,18 @@
   padding: 8px 8px;
   width: 180;
   height: 48;
-  border-radius: $border-radius;
-  border: 1px solid $border-color;
-  background-color: $dark-color;
-  color: $paragraph-color;
+  border-radius: $border-radius8;
+  // border: 1px solid $border-color;
+  // background-color: $dark-color;
+  // color: $paragraph-color;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
-  &:hover {
-    border-color: $primary-color;
-    color: $primary-color;
-  }
+  // &:hover {
+  //   border-color: $primary-color;
+  //   color: $primary-color;
+  // }
 }
 
 @mixin grid-desktop {

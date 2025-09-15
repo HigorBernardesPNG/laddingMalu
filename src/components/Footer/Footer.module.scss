@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.hero {
+  @include grid-desktop;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  background-color: $dark-color;
+  text-align: center;
+  color: $light-color;
+}
+
+.container {
+  @include flex-direction;
+}

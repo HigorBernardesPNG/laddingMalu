@@ -3,9 +3,9 @@
 
 .hero {
   @include grid-desktop;
-  background-color: $dark-color;
-  height: 100lvh;
-  width: 100lvw;
+  background-color: $light-gray;
+  // height: 100lvh;
+  // width: 100lvw;
   text-align: center;
 }
 
@@ -41,11 +41,11 @@
 
 .titleSection {
 
-  color: $light-color;
+  color: $dark-color;
   font-size: $size-titule-areasSection;
-  border-bottom: 2px solid $light-color; 
+  border-bottom: 2px solid $dark-color; 
   display: inline-block; 
-  margin-bottom: 4px;
+  margin-bottom: 4px; 
 
 }
 
