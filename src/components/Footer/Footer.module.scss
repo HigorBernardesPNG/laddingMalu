@@ -11,6 +11,36 @@
   color: $light-color;
 }
 
-.container {
-  @include flex-direction;
+.containerHero {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
 }
+
+.containerHero p {
+
+  font-weight: bold;
+
+}
+
+.containerParagrafoImagem {
+
+  display: flex ;
+  gap: 1rem;
+
+}
+
+.containerParagrafoImagem p {
+
+  width: 24rem;
+  font-weight: lighter !important;
+
+}
+
+// .container {
+//   @include flex-direction;
+// }

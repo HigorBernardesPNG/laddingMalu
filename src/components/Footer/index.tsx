@@ -5,20 +5,22 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <section className={styles.hero}>
-        <p>
-            © 2025 Maria Luiza Munhoz — Todos os direitos reservados.
-        </p>
-        <div>
-            <Image
-                src="/images/logoComEscritaFooter.svg"
-                alt="Logo da advogada Maria Luiza Munhoz"
-                width={240}
-                height={240}
-                priority
-            />
+        <div className={styles.containerHero}>
             <p>
-                Este site tem caráter exclusivamente informativo e não configura publicidade ou promessa de resultado, conforme o Código de Ética da OAB.
+                © 2025 Maria Luiza Munhoz — Todos os direitos reservados.
             </p>
+            <div className={styles.containerParagrafoImagem}>
+                <Image
+                    src="/images/logoComEscritaFooter.svg"
+                    alt="Logo da advogada Maria Luiza Munhoz"
+                    width={240}
+                    height={40}
+                    priority
+                />
+                    <p>
+                        Este site tem caráter exclusivamente informativo e não configura publicidade ou promessa de resultado, conforme o Código de Ética da OAB.
+                    </p>
+            </div>
         </div>
     </section>
   );
