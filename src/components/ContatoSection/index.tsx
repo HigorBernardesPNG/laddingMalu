@@ -28,11 +28,13 @@ const ContatoSection = () => {
                     priority
                 />
 
-                <p> jlmvendas@hotmail.com </p>
-                <p> marialuizamunhoz@hotmail.com </p>
+                <div className={styles.containerAreaContatosEmails}>
+                    <p> jlmvendas@hotmail.com </p>
+                    <p> marialuizamunhoz@hotmail.com </p>
+                </div>
 
-                <div>
-                    <button>
+                <div className={styles.containerButtonsRedesSociais}>
+                    <button className={styles.ButtonRedesSociais}>
                         <Image
                             src="/images/botoesLinkedinAreaContato.svg"
                             alt="Logo da advogada Maria Luiza Munhoz"
@@ -41,7 +43,7 @@ const ContatoSection = () => {
                             priority
                         />
                     </button>
-                    <button>
+                    <button className={styles.ButtonRedesSociais}>
                         <Image
                             src="/images/botoesInstagramAreaContato.svg"
                             alt="Logo da advogada Maria Luiza Munhoz"
