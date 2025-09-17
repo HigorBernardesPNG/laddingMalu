@@ -2,17 +2,27 @@
 @import '../../styles/variables';
 
 .hero {
+
   @include grid-desktop;
-  background-color: $dark-color;
+  background-color: $background-one;
   // height: 100lvh;
   // width: 100lvw;
   // text-align: center;
+
 }
 
 .container {
+
   @include flex-center;
   gap: 16px;
   margin: 0 auto;
+
+}
+
+.containerSobreCaixa {
+
+  padding: 0 4rem 0 0;
+
 }
 
 .containerSobre {
@@ -29,11 +39,34 @@
   border-bottom: 1px solid $light-gray;
   padding-bottom: 1em;
 
+  .ButtonRedesSociais {
+
+     @include button-socialMedia;
+
+  }
+
 }
 
 .containerRedesSocias {
+
   display: flex;
   gap: 1em;
+
+}
+
+.iconSociais {
+
+  transition: transform 0.4s ease;
+
+  &:hover {
+  transform: scale(1.05); // aumenta 5%
+  }
+
+}
+
+.iconButton, .iconSociais {
+  color: $primary-color;
+  width: 1.5rem;
 }
 
 .containerSobreTexto {
@@ -44,9 +77,11 @@
 }
 
 .paragraph {
-  color: $light-color;
+
+  color: $paragraph-color;
   font-size: $size-text-block;
   font-weight: 400;
+
 }
 
 .containerButton {
@@ -57,12 +92,24 @@
 }
 
 .ctaButton {
+
   @include button-base;
+  background-color: $dark-color;
+  color: $primary-color;
+  width: 11rem;
+  // transition: transform 0.4s ease, border-color 0.4s ease;
+  transition: border 0.8s ease;
+
+   &:hover {
+    border-color: $primary-color; // aumenta 5%
+  }
+
 }
 
 .imagemMariaLuzia {
 
   // box-shadow: inset;
+  border-radius: 4px;
   box-shadow: 3px 3px 3px 1px $primary-color;
 
 }

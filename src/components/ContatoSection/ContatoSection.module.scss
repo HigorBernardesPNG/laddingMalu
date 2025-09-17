@@ -23,14 +23,18 @@
   flex-direction: column;
   width: 100%;
   box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.514);
-  background-color: $dark-color;
-  padding: 32px 32px;
+  background-color: $background-one;
+  padding: 3rem;
   border-radius: 16px 0 0 16px;
-  gap: 16px;
+  gap: 4.5rem;
 
   p {
     font-size: $size-subtitule-heroSection;
-    color: $light-color
+    color: $paragraph-color;
+    font-size: $size-subtitule-heroSection;
+    font-weight: 500;
+    text-align: justify;
+    
   }
 
 }
@@ -42,9 +46,9 @@
   width:  100%;
   box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.514);
   background-color: $light-color;
-  padding: 32px 32px;
+  padding: 2rem;
   border-radius: 0 16px 16px 0;
-  gap: 16px;
+  gap: 2rem;
 
   p {
     font-size: $size-subtitule-heroSection;
@@ -53,14 +57,32 @@
 }
 
 .ctaButton {
+  
   @include button-base;
+  background-color: $primary-color;
+  color: $dark-color;
+  width: 9rem;
+  // transition: transform 0.4s ease, border-color 0.4s ease;
+  transition: transform 0.4s ease;
+
+   &:hover {
+    transform: scale(1.05); // aumenta 5%
+  }
+  
 }
 
 .containerAreaContatosEmails {
 
-  border-bottom: 1px solid $dark-color;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid $dark-color;
   padding-bottom: 1rem;
+  gap: .5rem;
 
+   p {
+    font-weight: 500;
+    font-size: $size-text-block;
+  }
 }
 
 .containerButtonsRedesSociais {
@@ -74,6 +96,7 @@
 
 .ButtonRedesSociais {
 
+  @include button-socialMedia;
   border: none;
   background: none;
   cursor: pointer;

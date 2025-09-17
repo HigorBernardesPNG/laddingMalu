@@ -1,15 +1,17 @@
 'use client';
 import styles from './Sobre.module.scss';
+import IconButton from "../../assets/icons/iconButton.svg";
+import InstagramIcon from "@/assets/icons/instagram.svg";
+import LinkedinIcon from "@/assets/icons/linkedin.svg";
 import Image from 'next/image';
 
 const SobreSection = () => {
   return (
     <section className={styles.hero}>
         <div className={styles.container}>
-            <section>
+            <section className={styles.containerSobreCaixa}>
                 <div className={styles.containerSobre}>
-                    <div className={styles.containerLogoERedesSociais}>
-                        <Image 
+                    <div className={styles.containerLogoERedesSociais}>                      <Image 
                             src="/images/logoComEscrita.svg"
                             alt="Logo da advogada Maria Luiza Munhoz"
                             width={240}
@@ -17,20 +19,8 @@ const SobreSection = () => {
                             priority
                         />
                         <div className={styles.containerRedesSocias}>
-                            <Image 
-                            src="/images/instagram.svg"
-                            alt="Logo da advogada Maria Luiza Munhoz"
-                            width={24}
-                            height={24}
-                            priority
-                            />
-                            <Image 
-                            src="/images/linkedin.svg"
-                            alt="Logo da advogada Maria Luiza Munhoz"
-                            width={24}
-                            height={24}
-                            priority
-                            />
+                            <InstagramIcon className={styles.iconSociais} />
+                            <LinkedinIcon className={styles.iconSociais} />
                         </div>
                     </div>
                     <Image 
@@ -52,13 +42,8 @@ const SobreSection = () => {
                 </div>
                 <div className={styles.containerButton}>
                     <button className={styles.ctaButton}>
-                        <Image 
-                        src="/images/iconButton.svg"
-                        alt="Logo da advogada Maria Luiza Munhoz"
-                        width={24}
-                        height={24}
-                        priority
-                        /> Saiba mais
+                        <IconButton className={styles.iconButton} />
+                         Saiba mais
                     </button>
                 </div>
             </section>

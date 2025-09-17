@@ -11,8 +11,8 @@ const ContatoSection = () => {
                 <p> Para dúvidas iniciais, agendamento de consultas ou início do atendimento jurídico, entre em contato diretamente pelo WhatsApp. O primeiro passo para a solução do seu caso pode começar com uma conversa segura e orientada. </p>
                 <button className={styles.ctaButton}>
                 <Image 
-                    src="/images/iconButton.svg"
-                    alt="Logo da advogada Maria Luiza Munhoz"
+                    src="/images/iconButtonDark.svg"
+                    alt="Icone de bate-papo"
                     width={24}
                     height={24}
                     priority/> Saiba mais
@@ -29,7 +29,7 @@ const ContatoSection = () => {
                 />
 
                 <div className={styles.containerAreaContatosEmails}>
-                    <p> jlmvendas@hotmail.com </p>
+                    <p> (67) 98118-2850 </p>
                     <p> marialuizamunhoz@hotmail.com </p>
                 </div>
 
