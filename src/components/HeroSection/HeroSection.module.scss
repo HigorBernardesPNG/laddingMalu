@@ -5,8 +5,8 @@
   @include grid-desktop;
   // background-color: $background-one;
   background-image: url(/images/areaInicial.svg);
-  // height: 100lvh;
-  // width: 100lvw;
+  min-height: 100dvh;
+  // width: 100dvh;
   text-align: center;
 }
 
