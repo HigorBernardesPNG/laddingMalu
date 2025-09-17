@@ -71,6 +71,35 @@
   
 }
 
+.iconSociais {
+
+  transition: transform 0.4s ease;
+
+  &:hover {
+  transform: scale(1.15); // aumenta 15%
+  cursor: pointer;
+  }
+
+}
+
+.iconButton, .iconSociais {
+
+  color: $dark-color;
+  
+}
+
+.iconSociais {
+
+  width: 2.5rem;
+
+}
+
+.iconButton {
+
+  width: 1.5rem;
+
+}
+
 .containerAreaContatosEmails {
 
   display: flex;
@@ -88,17 +117,8 @@
 .containerButtonsRedesSociais {
 
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   // border-top: 1px solid $dark-color;
-
-}
-
-.ButtonRedesSociais {
-
-  @include button-socialMedia;
-  border: none;
-  background: none;
-  cursor: pointer;
 
 }

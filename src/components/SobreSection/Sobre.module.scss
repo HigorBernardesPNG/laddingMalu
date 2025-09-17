@@ -36,6 +36,9 @@
 
 .containerLogoERedesSociais {
 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   border-bottom: 1px solid $light-gray;
   padding-bottom: 1em;
 
@@ -59,7 +62,8 @@
   transition: transform 0.4s ease;
 
   &:hover {
-  transform: scale(1.05); // aumenta 5%
+  transform: scale(1.15); // aumenta 15%
+  cursor: pointer;
   }
 
 }

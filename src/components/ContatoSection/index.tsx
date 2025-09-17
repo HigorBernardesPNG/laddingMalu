@@ -1,5 +1,8 @@
 'use client';
 import styles from './ContatoSection.module.scss';
+import IconButton from "../../assets/icons/iconButton.svg";
+import InstagramIcon from "@/assets/icons/instagram.svg";
+import LinkedinIcon from "@/assets/icons/linkedin.svg";
 import Image from 'next/image';
 
 const ContatoSection = () => {
@@ -10,12 +13,8 @@ const ContatoSection = () => {
 
                 <p> Para dúvidas iniciais, agendamento de consultas ou início do atendimento jurídico, entre em contato diretamente pelo WhatsApp. O primeiro passo para a solução do seu caso pode começar com uma conversa segura e orientada. </p>
                 <button className={styles.ctaButton}>
-                <Image 
-                    src="/images/iconButtonDark.svg"
-                    alt="Icone de bate-papo"
-                    width={24}
-                    height={24}
-                    priority/> Saiba mais
+                    <IconButton alt="Um icone de um balão de bate-papo" className={styles.iconButton} />
+                    Solicitar atendimento
                 </button>
 
             </div>
@@ -34,24 +33,8 @@ const ContatoSection = () => {
                 </div>
 
                 <div className={styles.containerButtonsRedesSociais}>
-                    <button className={styles.ButtonRedesSociais}>
-                        <Image
-                            src="/images/botoesLinkedinAreaContato.svg"
-                            alt="Logo da advogada Maria Luiza Munhoz"
-                            width={40}
-                            height={40}
-                            priority
-                        />
-                    </button>
-                    <button className={styles.ButtonRedesSociais}>
-                        <Image
-                            src="/images/botoesInstagramAreaContato.svg"
-                            alt="Logo da advogada Maria Luiza Munhoz"
-                            width={40}
-                            height={40}
-                            priority
-                        />
-                    </button>
+                        <LinkedinIcon alt="Logo do Linkedin" className={styles.iconSociais} />
+                        <InstagramIcon alt="Logo do Instagram" className={styles.iconSociais} />
                 </div>
 
             </div>

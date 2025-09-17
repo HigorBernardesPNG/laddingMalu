@@ -19,13 +19,13 @@ const SobreSection = () => {
                             priority
                         />
                         <div className={styles.containerRedesSocias}>
-                            <InstagramIcon className={styles.iconSociais} />
-                            <LinkedinIcon className={styles.iconSociais} />
+                            <InstagramIcon alt="Logo do Instagram" className={styles.iconSociais} />
+                            <LinkedinIcon alt="Logo do Linkedin" className={styles.iconSociais} />
                         </div>
                     </div>
                     <Image 
                         src="/images/escritaAdvogadaOAB.svg"
-                        alt="Logo da advogada Maria Luiza Munhoz"
+                        alt="OAB da advogada Maria Luiza Munhoz"
                         width={240}
                         height={18}
                         priority
@@ -42,15 +42,15 @@ const SobreSection = () => {
                 </div>
                 <div className={styles.containerButton}>
                     <button className={styles.ctaButton}>
-                        <IconButton className={styles.iconButton} />
-                         Saiba mais
+                        <IconButton alt="Um icone de um balão de bate-papo" className={styles.iconButton} />
+                         Agendar atendimento
                     </button>
                 </div>
             </section>
             <section>
                 <Image className={styles.imagemMariaLuzia}
                         src="/images/fotoDaProfissional.svg"
-                        alt="Logo da advogada Maria Luiza Munhoz"
+                        alt="Foto da advogada Maria Luiza Munhoz em pé em um fundo cinza minimalista. Ela está sorrindo, com cabelos solto e roupas escuras."
                         width={380}
                         height={480}
                         priority
