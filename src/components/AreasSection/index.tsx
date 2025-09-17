@@ -1,5 +1,6 @@
 'use client';
 import styles from './AreasSection.module.scss';
+import IconButton from "../../assets/icons/iconButton.svg";
 import Image from 'next/image';
 
 const AreasSection = () => {
@@ -7,13 +8,13 @@ const AreasSection = () => {
     <section className={styles.hero}>
       <div className={styles.container}>
         <h1 className={styles.titleSection}>
-        Áreas de Atuação
+            Áreas de Atuação
         </h1>
         <section className={styles.containerAreasGlobal}>
             <div className={styles.containerAreas}>
                 <Image
                     src="/images/direitoCivil.svg"
-                    alt="Logo da advogada Maria Luiza Munhoz"
+                    alt="Uma imagem representando o Direito Civil"
                     width={88}
                     height={40}
                     priority
@@ -24,7 +25,7 @@ const AreasSection = () => {
             <div className={styles.containerAreas}>
                 <Image
                     src="/images/direitoDaFamilia.svg"
-                    alt="Logo da advogada Maria Luiza Munhoz"
+                    alt="Uma imagem representando o Direito da Familia"
                     width={88}
                     height={40}
                     priority
@@ -35,7 +36,7 @@ const AreasSection = () => {
             <div className={styles.containerAreas}>
                 <Image
                     src="/images/direitoDoConsumidor.svg"
-                    alt="Logo da advogada Maria Luiza Munhoz"
+                    alt="Uma imagem representando o Direito do Consumidor"
                     width={88}
                     height={40}
                     priority
@@ -48,7 +49,7 @@ const AreasSection = () => {
             <div className={styles.containerAreas}>
                 <Image
                     src="/images/direitoTrabalhista.svg"
-                    alt="Logo da advogada Maria Luiza Munhoz"
+                    alt="Uma imagem representando o Direito Trabalhista"
                     width={88}
                     height={40}
                     priority
@@ -59,7 +60,7 @@ const AreasSection = () => {
             <div className={styles.containerAreas}>
                 <Image
                     src="/images/direitoDigitalELGPD.svg"
-                    alt="Logo da advogada Maria Luiza Munhoz"
+                    alt="Uma imagem representando o Direito Digital"
                     width={88}
                     height={40}
                     priority
@@ -70,7 +71,7 @@ const AreasSection = () => {
             <div className={styles.containerAreas}>
                 <Image
                     src="/images/outrasAreas.svg"
-                    alt="Logo da advogada Maria Luiza Munhoz"
+                    alt="Uma imagem representando outras areas do direito"
                     width={88}
                     height={40}
                     priority
@@ -80,12 +81,8 @@ const AreasSection = () => {
             </div> 
         </section>
         <button className={styles.ctaButton}>
-        <Image 
-        src="/images/iconButton.svg"
-        alt="Logo da advogada Maria Luiza Munhoz"
-        width={24}
-        height={24}
-        priority/> Saiba mais
+            <IconButton alt="Um icone de um balão de bate-papo" className={styles.iconButton} />
+            Saiba mais
         </button>
         
       </div>

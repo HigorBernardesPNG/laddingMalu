@@ -61,7 +61,8 @@
   @include button-base;
   background-color: $primary-color;
   color: $dark-color;
-  width: 9rem;
+  width: auto;
+  font-size: .9rem;
   // transition: transform 0.4s ease, border-color 0.4s ease;
   transition: transform 0.4s ease;
 
@@ -73,9 +74,11 @@
 
 .iconSociais {
 
-  transition: transform 0.4s ease;
+  transition: transform 0.8s ease;
+  padding: 0 .4rem .1rem .4rem;
 
   &:hover {
+  border-bottom: 3px solid $dark-color;
   transform: scale(1.15); // aumenta 15%
   cursor: pointer;
   }

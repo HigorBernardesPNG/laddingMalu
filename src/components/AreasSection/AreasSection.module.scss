@@ -2,17 +2,21 @@
 @import '../../styles/variables';
 
 .hero {
+
   @include grid-desktop;
   background-color: $light-gray;
   // height: 100lvh;
   // width: 100lvw;
   text-align: center;
+
 }
 
 .container {
+
   @include flex-direction;
   gap: 16px;
   margin: 0 auto;
+
 }
 
 .containerAreasGlobal {
@@ -34,7 +38,9 @@
     gap: 16px;
 
   p {
+
     font-size: $size-subtitule-heroSection;
+
   }
 
 }
@@ -50,15 +56,40 @@
 }
 
 .title {
+
   @include titule-base;
+
 }
 
 .paragraph {
+
   color: $background-one;
   font-size: $size-text-block;
   font-weight: 400;
+
 }
 
 .ctaButton {
+
   @include button-base;
+  width: auto;
+  font-size: .9rem;
+  color: $dark-color;
+  background: none;
+  // transition: transform 0.4s ease, border-color 0.4s ease;
+  transition: background-color 0.8s ease, color 0.8s ease;
+
+   &:hover {
+
+    background-color: $dark-color;
+    color: $primary-color;
+
+  }
+
+  .iconButton {
+
+  width: 1.5rem;
+
+  }
+
 }

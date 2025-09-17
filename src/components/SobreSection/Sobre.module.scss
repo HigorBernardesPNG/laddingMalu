@@ -59,7 +59,7 @@
 
 .iconSociais {
 
-  transition: transform 0.4s ease;
+  transition: transform 0.8s ease;
 
   &:hover {
   transform: scale(1.15); // aumenta 15%
@@ -100,7 +100,8 @@
   @include button-base;
   background-color: $dark-color;
   color: $primary-color;
-  width: 11rem;
+  width: auto;
+  font-size: .8rem;
   // transition: transform 0.4s ease, border-color 0.4s ease;
   transition: border 0.8s ease;
 

@@ -1,5 +1,6 @@
 'use client'; // Necessário para usar interações no App Router
 import styles from './HeroSection.module.scss';
+import IconButton from "../../assets/icons/iconButton.svg";
 import Image from 'next/image';
 
 const HeroSection = () => {
@@ -22,12 +23,8 @@ const HeroSection = () => {
           </p>
         </div>
         <button className={styles.ctaButton}>
-          <Image 
-          src="/images/iconButton.svg"
-          alt="Logo da advogada Maria Luiza Munhoz"
-          width={24}
-          height={24}
-          priority/> Solicitar consulta
+          <IconButton alt="Um icone de um balão de bate-papo" className={styles.iconButton} />
+          Solicitar consulta
         </button>
       </div>
     </section>
