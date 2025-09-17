@@ -3,6 +3,8 @@
 
 .hero {
   @include grid-desktop;
+  display: flex;
+  align-items: center;
   // background-color: $background-one;
   background-image: url(/images/areaInicial.svg);
   background-size: cover;
