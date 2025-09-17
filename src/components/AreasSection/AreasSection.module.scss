@@ -4,6 +4,7 @@
 .hero {
 
   @include grid-desktop;
+  display: flex;
   background-color: $light-gray;
   min-height: 100dvh;
   // width: 100lvw;

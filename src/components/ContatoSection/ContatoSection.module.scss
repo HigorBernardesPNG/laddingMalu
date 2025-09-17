@@ -3,6 +3,7 @@
 
 .hero {
   @include grid-desktop;
+  display: flex;
   background-color: $light-gray;
   border-radius: $border-radius32;
   // height: 50dvh;
