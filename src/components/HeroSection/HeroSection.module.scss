@@ -14,7 +14,6 @@
 }
 
 .container {
-  @include container-base;
   @include flex-direction;
   gap: 5rem;
   margin: 0 auto;
