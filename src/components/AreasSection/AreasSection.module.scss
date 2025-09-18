@@ -29,6 +29,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  touch-action: pan-y; /* permite rolagem vertical; bloqueamos horizontal via preventDefault quando swiping */
 }
 
 /* Card base (mantidos) */
@@ -42,6 +43,7 @@
   border-radius: 2px;
   gap: 2rem;
   min-height: 360px; /* evita pulo no mobile */
+  will-change: transform; /* micro-otimização caso queira animar translateX depois */
 
   p { font-size: $size-subtitule-heroSection; }
 }
@@ -59,7 +61,6 @@
   margin-top: .5rem;
 }
 
-/* Botões em formato circular, só com ícone */
 .navBtn {
   width: 36px;
   height: 36px;
@@ -75,8 +76,6 @@
 
   &:hover { transform: translateY(-1px); }
   &:active { transform: translateY(0); }
-
-  /* contraste em temas claros/escuros */
   &:hover { background: rgba(0,0,0,.04); border-color: rgba(0,0,0,.3); }
 }
 

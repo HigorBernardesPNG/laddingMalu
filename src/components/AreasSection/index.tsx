@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './AreasSection.module.scss';
 import IconButton from '../../assets/icons/iconButton.svg';
 import Image from 'next/image';
@@ -53,8 +53,59 @@ const items: Item[] = [
 export default function AreasSection() {
   const [active, setActive] = useState(0);
 
+  // navegação por clique
   const prev = () => setActive((i) => (i - 1 + items.length) % items.length);
   const next = () => setActive((i) => (i + 1) % items.length);
+
+  // ===== Swipe (touch) =====
+  const startXY = useRef<{ x: number; y: number } | null>(null);
+  const isSwiping = useRef(false);
+  const deltaX = useRef(0);
+  const SWIPE_START_TOL = 10;   // px para decidir que é swipe e não tap
+  const SWIPE_TRIGGER = 40;     // px para trocar o slide
+
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const t = e.touches[0];
+    startXY.current = { x: t.clientX, y: t.clientY };
+    isSwiping.current = false;
+    deltaX.current = 0;
+  };
+
+  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!startXY.current) return;
+    const t = e.touches[0];
+    const dx = t.clientX - startXY.current.x;
+    const dy = t.clientY - startXY.current.y;
+
+    // decide quando é swipe horizontal
+    if (!isSwiping.current && Math.abs(dx) > SWIPE_START_TOL && Math.abs(dx) > Math.abs(dy)) {
+      isSwiping.current = true;
+    }
+
+    if (isSwiping.current) {
+      // evitar scroll da página durante o swipe horizontal
+      e.preventDefault();
+      deltaX.current = dx;
+      // (opcional) você pode aplicar uma leve animação arrastando o card ativo com translateX
+      // deixei sem para manter simples e estável
+    }
+  };
+
+  const onTouchEnd = () => {
+    if (isSwiping.current) {
+      if (deltaX.current <= -SWIPE_TRIGGER) {
+        // arrastou para a esquerda -> próximo
+        next();
+      } else if (deltaX.current >= SWIPE_TRIGGER) {
+        // arrastou para a direita -> anterior
+        prev();
+      }
+    }
+    // reset
+    startXY.current = null;
+    isSwiping.current = false;
+    deltaX.current = 0;
+  };
 
   return (
     <section className={styles.hero}>
@@ -62,7 +113,14 @@ export default function AreasSection() {
         <h1 className={styles.titleSection}>Áreas de Atuação</h1>
 
         {/* Mobile: 1 card ativo; Desktop: grade 3x2 com todos */}
-        <div className={styles.cardsWrap} role="region" aria-label="Carrossel de áreas (mobile)">
+        <div
+          className={styles.cardsWrap}
+          role="region"
+          aria-label="Carrossel de áreas (mobile)"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           {items.map((it, idx) => (
             <article
               key={it.title}
@@ -85,7 +143,6 @@ export default function AreasSection() {
             type="button"
             aria-label="Anterior"
           >
-            {/* seta esquerda */}
             <svg viewBox="0 0 24 24" className={styles.navIcon} aria-hidden="true">
               <path d="M15.5 4.5L8 12l7.5 7.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -109,7 +166,6 @@ export default function AreasSection() {
             type="button"
             aria-label="Próximo"
           >
-            {/* seta direita */}
             <svg viewBox="0 0 24 24" className={styles.navIcon} aria-hidden="true">
               <path d="M8.5 4.5L16 12l-7.5 7.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
