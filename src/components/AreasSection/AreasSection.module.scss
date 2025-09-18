@@ -2,95 +2,145 @@
 @import '../../styles/variables';
 
 .hero {
-
   @include grid-desktop;
   display: flex;
   background-color: $light-gray;
   min-height: 100dvh;
-  // width: 100lvw;
   text-align: center;
-  
 }
 
 .container {
-
   @include flex-direction;
   gap: 2rem;
   margin: 0 auto;
-
-}
-
-.containerAreasGlobal {
-
-    display: flex;
-    gap: 2rem;
-
-}
-
-.containerAreas {
-
-    @include flex-center;
-    flex-direction: column;
-    width: 100%;
-    box-shadow: 0px 0px 8px 1px $dark-color;
-    background-color: $light-color;
-    padding: 32px 32px;
-    border-radius: 2px;
-    gap: 2rem;
-
-  p {
-
-    font-size: $size-subtitule-heroSection;
-
-  }
-
 }
 
 .titleSection {
-
   color: $dark-color;
   font-size: $size-titule-areasSection;
-  border-bottom: 2px solid $dark-color; 
-  display: inline-block; 
-  margin-bottom: 4px; 
-
+  border-bottom: 2px solid $dark-color;
+  display: inline-block;
+  margin-bottom: 4px;
 }
 
-.title {
-
-  @include titule-base;
-
+/* ====== CARDS ====== */
+/* Base (MOBILE-FIRST): 1 coluna, mas só o ativo aparece */
+.cardsWrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
+
+/* Card base (mantidos) */
+.containerAreas {
+  @include flex-center;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 0px 8px 1px $dark-color;
+  background-color: $light-color;
+  padding: 32px 32px;
+  border-radius: 2px;
+  gap: 2rem;
+  min-height: 360px; /* evita pulo no mobile */
+
+  p { font-size: $size-subtitule-heroSection; }
+}
+
+/* Lógica do “carrossel” (apenas no mobile por padrão) */
+.isInactive { display: none; }
+.isActive { display: block; }
+
+/* ====== CONTROLES (apenas no mobile) ====== */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  margin-top: .5rem;
+}
+
+/* Botões em formato circular, só com ícone */
+.navBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,.2);
+  background: $light-color;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: transform .15s ease, background-color .2s ease, border-color .2s ease;
+
+  &:hover { transform: translateY(-1px); }
+  &:active { transform: translateY(0); }
+
+  /* contraste em temas claros/escuros */
+  &:hover { background: rgba(0,0,0,.04); border-color: rgba(0,0,0,.3); }
+}
+
+.navBtnLeft {}
+.navBtnRight {}
+
+.navIcon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  color: $dark-color;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.25);
+  border: none;
+  cursor: pointer;
+}
+
+.dotActive { background: $dark-color; }
+
+/* ====== DESKTOP (>= 768px): SEM carrossel ====== */
+@media (min-width: 768px) {
+  .cardsWrap {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .isInactive, .isActive { display: block; } /* todos visíveis */
+  .controls { display: none; }               /* esconde setas e dots */
+}
+
+/* ====== Tipografia + CTA (mantidos) ====== */
+.title { @include titule-base; }
 
 .paragraph {
-
   color: $background-one;
   font-size: $size-text-block;
   font-weight: 400;
-
 }
 
 .ctaButton {
-
   @include button-base;
   width: auto;
   font-size: .9rem;
   color: $dark-color;
   background: none;
-  // transition: transform 0.4s ease, border-color 0.4s ease;
   transition: background-color 0.8s ease, color 0.8s ease;
 
-   &:hover {
-
+  &:hover {
     background-color: $dark-color;
     color: $primary-color;
-
   }
 
-  .iconButton {
-
-  width: 1.5rem;
-
-  }
-
+  .iconButton { width: 1.5rem; }
 }
