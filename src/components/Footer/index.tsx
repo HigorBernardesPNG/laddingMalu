@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <section className={styles.hero}>
         <div className={styles.containerHero}>
-            <p>
+            <p className={styles.direitoReservado}>
                 © 2025 Maria Luiza Munhoz — Todos os direitos reservados.
             </p>
             <div className={styles.containerParagrafoImagem}>
@@ -17,7 +17,7 @@ const Footer = () => {
                     height={40}
                     priority
                 />
-                    <p>
+                    <p className={styles.caraterInformativo}>
                         Este site tem caráter exclusivamente informativo e não configura publicidade ou promessa de resultado, conforme o Código de Ética da OAB.
                     </p>
             </div>

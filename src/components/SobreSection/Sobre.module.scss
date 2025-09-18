@@ -6,6 +6,7 @@
   @include grid-desktop;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: $background-one;
   min-height: 100dvh;
   // width: 100lvw;
@@ -24,6 +25,10 @@
 .containerSobreCaixa {
 
   padding: 0 4rem 0 0;
+
+  @include respond-to(md) {
+    padding: 0px;
+  }
 
 }
 
@@ -118,5 +123,9 @@
   // box-shadow: inset;
   border-radius: 4px;
   box-shadow: 3px 3px 3px 1px $primary-color;
+
+  @include respond-to(md) {
+    display: none;
+  }
 
 }

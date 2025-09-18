@@ -5,6 +5,7 @@
   @include grid-desktop;
   display: flex;
   align-items: center;
+  justify-content: center;
   // background-color: $background-one;
   background-image: url(/images/areaInicial.svg);
   background-size: cover;
@@ -18,6 +19,10 @@
 .logoHero {
 
   width: 24rem;
+
+  @include respond-to(md) {
+    width: 16rem;
+  }
 
 }
 
