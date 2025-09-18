@@ -1,19 +1,13 @@
 'use client'; // Necessário para usar interações no App Router
 import styles from './HeroSection.module.scss';
 import IconButton from "../../assets/icons/iconButton.svg";
-import Image from 'next/image';
+import LogoHero from "../../assets/icons/logoHeroSection.svg";
 
 const HeroSection = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
-        <Image
-          src="/images/logoHeroSection.svg"
-          alt="Logo da advogada Maria Luiza Munhoz"
-          width={288}
-          height={200}
-          priority
-        />
+        <LogoHero alt="Logo da advogada Maria Luiza Munhoz" className={styles.logoHero}/>
         <div>
           <p className={styles.title}>
             Advocacia objetiva, personalizada e eficiente

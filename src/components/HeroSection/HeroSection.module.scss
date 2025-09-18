@@ -15,6 +15,12 @@
   text-align: center;
 }
 
+.logoHero {
+
+  width: 24rem;
+
+}
+
 .container {
   @include flex-direction;
   gap: 5rem;
