@@ -12,11 +12,11 @@ $border-color: #000000;
 // Fonts
 $font-base: 'Sora', sans-serif;
 $font-explanatory: 'inter', sans-serif;
-$size-base: 1.75rem;                  // 28px
-$size-text-block: 1rem;               // 16px
-$size-titule-heroSection: 2.5rem;     // 40px
-$size-subtitule-heroSection: 1.25rem; // 20px
-$size-titule-areasSection: 1.75rem;   // 28px
+$size-base: clamp(1.25rem, 1.5vw, 1.75rem);                  // 20px ~ 28px
+$size-text-block: clamp(0.875rem, 1vw, 1rem);                // 14px ~ 16px
+$size-titule-heroSection: clamp(2rem, 3vw, 2.5rem);          // 32px ~ 40px
+$size-subtitule-heroSection: clamp(1rem, 1.5vw, 1.25rem);    // 16px ~ 20px
+$size-titule-areasSection: clamp(1.25rem, 2vw, 1.75rem);    // 28px ~ 30px
 
 // Spacing
 $spacing-xs: 4px;

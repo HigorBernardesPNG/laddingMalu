@@ -23,7 +23,7 @@
 
 .container {
   @include flex-direction;
-  gap: clamp(24px, 8vw, 80px);
+  gap: clamp(24px, 8vw, 129px);
   margin: 0 auto;
 }
 
