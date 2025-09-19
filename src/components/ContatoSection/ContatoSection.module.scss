@@ -50,6 +50,12 @@
     font-size: $size-subtitule-heroSection;
     font-weight: 500;
     text-align: justify;
+
+  @include respond-to(md) {
+
+   text-align: center;
+   
+  }
     
   }
 

@@ -20,6 +20,10 @@
   gap: 16px;
   margin: 0 auto;
 
+  @include respond-to(md) {
+    gap: 0px;
+  }
+
 }
 
 .containerSobreCaixa {

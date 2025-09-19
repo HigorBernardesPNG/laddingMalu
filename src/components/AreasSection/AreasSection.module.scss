@@ -7,6 +7,12 @@
   background-color: $light-gray;
   min-height: 100dvh;
   text-align: center;
+
+  @include respond-to(md) {
+
+    padding: 3.5rem 2.5rem;
+
+  }
 }
 
 .container {
@@ -50,7 +56,7 @@
 
 /* Lógica do “carrossel” (apenas no mobile por padrão) */
 .isInactive { display: none; }
-.isActive { display: block; }
+.isActive { display: flex; }
 
 /* ====== CONTROLES (apenas no mobile) ====== */
 .controls {

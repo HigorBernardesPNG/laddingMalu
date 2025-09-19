@@ -60,6 +60,12 @@
 
   padding: 3.5rem 5.5rem;
 
+  @include respond-to(md) {
+
+    padding: 2.5rem 1rem;;
+
+  }
+
 }
 
 @mixin flex-center {
