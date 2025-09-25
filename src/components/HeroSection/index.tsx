@@ -11,7 +11,7 @@ const HeroSection = () => {
         <LogoHero alt="Logo da advogada Maria Luiza Munhoz" className={styles.logoHero}/>
         <div>
           <h1 className={styles.title}>
-            Advocacia objetiva, h1ersonalizada e eficiente
+            Advocacia objetiva, personalizada e eficiente
           </h1>
           <h2 className={styles.subtitle}>
             Atendimento jurídico em diversas áreas, com foco na solução e no rigor técnico
