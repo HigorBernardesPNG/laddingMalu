@@ -21,9 +21,9 @@ const urlLinkedin = `https://www.linkedin.com/in/marialumunhoz?utm_source=share&
 
 const ContatoSection = () => {
   return (
-    <section id='contatoSection' className={styles.hero}>
+    <section className={styles.hero}>
         <div className={styles.containerAreasGlobal}> 
-            <div className={styles.containerAreaSolicitarAtendimento}>
+            <div id='contatoSection' className={styles.containerAreaSolicitarAtendimento}>
 
                 <p> Para dúvidas iniciais, agendamento de consultas ou início do atendimento jurídico, entre em contato diretamente pelo WhatsApp. O primeiro passo para a solução do seu caso pode começar com uma conversa segura e orientada. </p>
                 <a
