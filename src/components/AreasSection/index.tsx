@@ -3,6 +3,8 @@ import { useState, useRef } from 'react';
 import styles from './AreasSection.module.scss';
 import IconButton from '../../assets/icons/iconButton.svg';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 type Item = {
   src: string;
@@ -108,7 +110,7 @@ export default function AreasSection() {
   };
 
   return (
-    <section className={styles.hero}>
+    <section id="areasSection" className={styles.hero}>
       <div className={styles.container}>
         <h1 className={styles.titleSection}>Áreas de Atuação</h1>
 
@@ -171,11 +173,12 @@ export default function AreasSection() {
             </svg>
           </button>
         </div>
-
-        <button className={styles.ctaButton}>
-          <IconButton alt="Um ícone de um balão de bate-papo" className={styles.iconButton} />
-          Saiba mais
-        </button>
+        <Link href="#contatoSection">
+          <button className={styles.ctaButton}>
+            <IconButton alt="Um ícone de um balão de bate-papo" className={styles.iconButton} />
+            Saiba mais
+          </button>
+        </Link>
       </div>
     </section>
   );

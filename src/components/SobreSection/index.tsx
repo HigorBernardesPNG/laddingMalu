@@ -4,10 +4,18 @@ import IconButton from "../../assets/icons/iconButton.svg";
 import InstagramIcon from "@/assets/icons/instagram.svg";
 import LinkedinIcon from "@/assets/icons/linkedin.svg";
 import Image from 'next/image';
+import Link from 'next/link';
+
+// -------------------INSTAGRAM/LINKEDIN------------------------
+
+const urlInstagram = `https://www.instagram.com/marialumunhoz?igsh=a3ZjZDhzZ3ZhZHht`;
+const urlLinkedin = `https://www.linkedin.com/in/marialumunhoz?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app`;
+
+// -------------------------------------------------------------
 
 const SobreSection = () => {
   return (
-    <section className={styles.hero}>
+    <section id='sobreSection' className={styles.hero}>
         <div className={styles.container}>
             <section className={styles.containerSobreCaixa}>
                 <div className={styles.containerSobre}>
@@ -19,8 +27,20 @@ const SobreSection = () => {
                             priority
                         />
                         <div className={styles.containerRedesSocias}>
-                            <InstagramIcon alt="Logo do Instagram" className={styles.iconSociais} />
-                            <LinkedinIcon alt="Logo do Linkedin" className={styles.iconSociais} />
+                            <a
+                                href= {urlInstagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <InstagramIcon alt="Logo do Instagram" className={styles.iconSociais}/> 
+                            </a>
+                            <a
+                                href= {urlLinkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                 <LinkedinIcon alt="Logo do Linkedin" className={styles.iconSociais}/> 
+                            </a>
                         </div>
                     </div>
                     <Image 
@@ -41,10 +61,12 @@ const SobreSection = () => {
                     </p>
                 </div>
                 <div className={styles.containerButton}>
-                    <button className={styles.ctaButton}>
-                        <IconButton alt="Um icone de um balão de bate-papo" className={styles.iconButton} />
-                         Agendar atendimento
-                    </button>
+                    <Link href="#contatoSection">
+                        <button className={styles.ctaButton}>
+                            <IconButton alt="Um icone de um balão de bate-papo" className={styles.iconButton} />
+                            Agendar atendimento
+                        </button>
+                    </Link>
                 </div>
             </section>
             <section>

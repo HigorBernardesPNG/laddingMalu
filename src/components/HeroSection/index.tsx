@@ -2,10 +2,11 @@
 import styles from './HeroSection.module.scss';
 import IconButton from "../../assets/icons/iconButton.svg";
 import LogoHero from "../../assets/icons/logoHeroSection.svg";
+import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <section className={styles.hero}>
+    <section id='heroSection' className={styles.hero}>
       <div className={styles.container}>
         <LogoHero alt="Logo da advogada Maria Luiza Munhoz" className={styles.logoHero}/>
         <div>
@@ -16,10 +17,12 @@ const HeroSection = () => {
             Atendimento jurídico em diversas áreas, com foco na solução e no rigor técnico
           </p>
         </div>
-        <button className={styles.ctaButton}>
-          <IconButton alt="Um icone de um balão de bate-papo" className={styles.iconButton} />
-          Solicitar consulta
-        </button>
+        <Link href="#contatoSection">
+          <button className={styles.ctaButton}>
+            <IconButton alt="Um icone de um balão de bate-papo" className={styles.iconButton} />
+            Solicitar consulta
+          </button>
+        </Link>
       </div>
     </section>
   );
