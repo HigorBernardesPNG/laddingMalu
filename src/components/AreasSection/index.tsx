@@ -112,7 +112,7 @@ export default function AreasSection() {
   return (
     <section id="areasSection" className={styles.hero}>
       <div className={styles.container}>
-        <h1 className={styles.titleSection}>Áreas de Atuação</h1>
+        <h3 className={styles.titleSection}>Áreas de Atuação</h3>
 
         {/* Mobile: 1 card ativo; Desktop: grade 3x2 com todos */}
         <div

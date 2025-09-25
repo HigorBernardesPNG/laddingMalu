@@ -10,12 +10,12 @@ const HeroSection = () => {
       <div className={styles.container}>
         <LogoHero alt="Logo da advogada Maria Luiza Munhoz" className={styles.logoHero}/>
         <div>
-          <p className={styles.title}>
-            Advocacia objetiva, personalizada e eficiente
-          </p>
-          <p className={styles.subtitle}>
+          <h1 className={styles.title}>
+            Advocacia objetiva, h1ersonalizada e eficiente
+          </h1>
+          <h2 className={styles.subtitle}>
             Atendimento jurídico em diversas áreas, com foco na solução e no rigor técnico
-          </p>
+          </h2>
         </div>
         <Link href="#contatoSection">
           <button className={styles.ctaButton}>
