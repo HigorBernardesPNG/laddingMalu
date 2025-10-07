@@ -10,8 +10,8 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Maria Luiza Munhoz - Advocacia",
-    "url": "https://ladding-malu-project.vercel.app",
-    "logo": "https://ladding-malu-project.vercel.app/banner.jpg",
+    "url": "https://mlmunhoz.adv.br",
+    "logo": "https://mlmunhoz.adv.br/banner.jpg",
     "telephone": "+55-67-981182850",
     "email": "marialuizamunhoz@hotmail.com",
     "address": {

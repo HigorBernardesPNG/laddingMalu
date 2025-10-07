@@ -4,7 +4,7 @@ import "./globals.css";
 import '@/styles/globals.scss';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ladding-malu-project.vercel.app"),
+  metadataBase: new URL("https://mlmunhoz.adv.br"),
   title: {
     default: "Advogada Maria Luiza Munhoz | Direito Civil e Consultoria",
     template: "%s | Maria Luiza Munhoz",
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    url: "https://ladding-malu-project.vercel.app/",
+    url: "https://mlmunhoz.adv.br/",
     title: "Advogada Maria Luiza Munhoz",
     description:
       "Consultoria e atendimento jurídico com orientação segura e objetiva.",
     images: [{ url: "/banner.jpg", width: 1200, height: 630, alt: "Marca ML Munhoz" }],
-    siteName: "Maria Luiza Munhoz",
+    siteName: "Dra. Maria Luiza Munhoz",
     locale: "pt_BR",
   },
   twitter: { card: "summary_large_image" },
