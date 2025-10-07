@@ -16,7 +16,7 @@ export default function Page() {
     "email": "marialuizamunhoz@hotmail.com",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Três Lagoas",
+      "addressLocality": "Aparecida do Taboado",
       "addressRegion": "MS",
       "addressCountry": "BR"
     },
