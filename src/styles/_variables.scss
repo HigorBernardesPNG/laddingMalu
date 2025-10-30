@@ -1,4 +1,34 @@
 // _variables.scss
+$F3EFEA: #F3EFEA;
+$F6EEE2: #F6EEE2;
+$FEFCF7: #FEFCF7;
+$BAA78D: #BAA78D;
+
+$DFD0BD: #DFD0BD;
+$DFD1BE: #DFD1BE;
+
+
+
+// Backgrounds-Windows
+    // Header
+        // $backgound-Header: ;
+    // HeroSection
+        $backgound-HeroSection: $F3EFEA;
+    // AreasSection
+        $backgound-AreasSection: $FEFCF7;
+            $backgound-AreasSection-Lateral: $F6EEE2;
+    // ContatoSection
+        $backgound-ContatoSection: $FEFCF7;
+            $backgound-ContatoSection-BlocoUm: $FEFCF7;
+            $backgound-ContatoSection-BlocoDois: $BAA78D;
+    // Footer
+        $backgound-Footer: $F3EFEA;
+
+// Backgrounds-Buttons
+    $Button0: $DFD0BD;
+    $Button1: $DFD1BE;
+    $Button2: $BAA78D;
+
 
 // Colors
 $primary-color: #E4D12C;

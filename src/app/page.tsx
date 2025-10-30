@@ -4,6 +4,7 @@ import SobreSection from '@/components/SobreSection';
 import ContatoSection from '@/components/ContatoSection';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
+import RespSection from '@/components/RespSection';
 
 export default function Page() {
   const jsonLd = {
@@ -38,6 +39,7 @@ export default function Page() {
       />
       {<main>
         <HeroSection/>
+        <RespSection />
         <AreasSection />
         <SobreSection />
         <ContatoSection />

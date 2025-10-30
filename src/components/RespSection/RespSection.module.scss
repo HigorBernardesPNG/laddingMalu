@@ -1,0 +1,66 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.hero {
+  @include grid-desktop;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: $background-one;
+  background-image: url(/images/areaInicial.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100dvh;
+  // width: 100dvh;
+  text-align: center;
+}
+
+.logoHero {
+
+  width: 24rem;
+
+  @include respond-to(md) {
+    width: 16rem;
+  }
+
+}
+
+.container {
+  @include flex-direction;
+  gap: clamp(24px, 8vw, 129px);
+  margin: 0 auto;
+}
+
+.title {
+  color: $paragraph-color;
+  font-size: $size-titule-heroSection;
+}
+
+.subtitle {
+  color: $paragraph-color;
+  font-size: $size-subtitule-heroSection;
+}
+
+.ctaButton {
+  @include button-base;
+  width: auto;
+  font-size: 1rem;
+  color: $light-gray;
+  background: $dark-color;
+  // transition: transform 0.4s ease, border-color 0.4s ease;
+  transition: background-color 0.8s ease, border 0.8s ease;
+
+   &:hover {
+
+    border-color: $primary-color;
+    color: $primary-color;
+
+  }
+
+  .iconButton {
+
+  width: 1.5rem;
+
+  }
+}
